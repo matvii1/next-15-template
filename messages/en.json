@@ -1,0 +1,34 @@
+{
+  "homepage": {
+    "title": "Hello, world!",
+    "hero": {
+      "title": "We unite the education system with the family institute for the benefit of every child"
+    },
+    "about": {
+      "title": "About us",
+      "description": {
+        "subdescription": "is a public organization",
+        "content": "created to support children and their families in difficult life situations. Our team unites people who believe in the importance of every child and strive to create a favorable environment for their development."
+      }
+    }
+  },
+  "header": {
+    "about": "About",
+    "news": "News",
+    "team": "Team",
+    "goals": "Goals"
+  },
+  "shared": {
+    "mamaPoruch": "mama poruch",
+    "home": "home"
+  },
+  "inputs": {
+    "locales": {
+      "en": "English",
+      "ua": "Ukrainian"
+    }
+  },
+  "errors": {
+    "notFound": "404 - Page Not Found"
+  }
+}
