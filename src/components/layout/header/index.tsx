@@ -1,13 +1,18 @@
+'use client'
+
+import { useMotionValueEvent, useScroll } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import { useRef, useState } from 'react'
 
 import { Messages } from '@/i18n/types'
+import { cn } from '@/lib/utils'
 
 import LocaleSwitcherSelect from './locale-select'
 
 const links: {
-  label: keyof Messages['header']
+  label: keyof Messages['shared']
   href: string
 }[] = [
   {
@@ -29,12 +34,48 @@ const links: {
 ]
 
 export default function Header(): React.JSX.Element {
-  const t = useTranslations('header')
+  const { scrollY } = useScroll()
+  const [hidden, setHidden] = useState(false)
+  const lastRef = useRef(0)
+
+  useMotionValueEvent(scrollY, 'change', (current) => {
+    const diff = current - lastRef.current
+
+    if (scrollY.get() < 100) {
+      setHidden(false)
+      lastRef.current = current
+
+      return
+    }
+
+    if (Math.abs(diff) > 10) {
+      setHidden(diff > 0)
+    }
+
+    lastRef.current = current
+  })
+
+  const t = useTranslations('shared')
+
   return (
     <>
-      <section className="fixed inset-x-0 top-0 z-50 w-full border-b bg-white py-6">
+      <section
+        className={cn(
+          'fixed inset-x-0 z-50 w-full border-b bg-white py-6 transition-all duration-500',
+          {
+            'top-0': !hidden,
+            '-top-[100%]': hidden,
+          }
+        )}
+      >
         <div className="container flex items-center justify-between">
-          <Image alt="logo" height={51} src={'/images/header-logo.svg'} width={136} />
+          <Image
+            alt="logo"
+            className="w-[140px]"
+            height={500}
+            src={'/images/logos/logo-orange.png'}
+            width={500}
+          />
 
           <nav>
             <ul className="flex items-center gap-4 rounded-full border border-grey-stroke p-4 px-8">

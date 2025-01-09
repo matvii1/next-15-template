@@ -10,17 +10,38 @@
         "subdescription": "is a public organization",
         "content": "created to support children and their families in difficult life situations. Our team unites people who believe in the importance of every child and strive to create a favorable environment for their development."
       }
+    },
+    "our-team": {
+      "subtitle": "team",
+      "title": "Our team",
+      "description": "We are a team of professionals who believe in the power of every child and strive to create a favorable environment for their development.",
+      "members": {
+        "yaroslava": {
+          "name": "Yaroslava Mozgova",
+          "description": "founder of the NGO “Mama poruch”, educational expert, project manager"
+        },
+        "mihail": {
+          "name": "Mihail Mozgovoy",
+          "description": "father, who is by the side; co-founder of the NGO “Mama poruch”."
+        }
+      }
+    },
+    "our-partners": {
+      "subtitle": "Collaboration that inspires",
+      "title": "Our partners",
+      "description": "Organizations with expertise in various fields and sharing values of support, development and scientific substantiation."
     }
   },
-  "header": {
+  "shared": {
+    "mamaPoruch": "mama poruch",
+    "home": "home",
+    "contacts": "contacts",
+    "documents": "documents",
+    "about-us": "about us",
     "about": "About",
     "news": "News",
     "team": "Team",
     "goals": "Goals"
-  },
-  "shared": {
-    "mamaPoruch": "mama poruch",
-    "home": "home"
   },
   "inputs": {
     "locales": {
@@ -30,5 +51,9 @@
   },
   "errors": {
     "notFound": "404 - Page Not Found"
+  },
+  "footer": {
+    "copyright": "Copyright {year}. Mama poruch org. All rights reserved.",
+    "description": "Text about the organization..."
   }
 }

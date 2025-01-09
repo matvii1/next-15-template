@@ -5,6 +5,7 @@ import { ReactNode } from 'react'
 
 import { cn } from '@/lib/utils'
 
+import Footer from './footer'
 import Header from './header'
 
 const NotoSerifFont = Noto_Serif({
@@ -32,7 +33,7 @@ export default async function BaseLayout({ children, locale }: Props) {
     <html lang={locale}>
       <body
         className={cn(
-          `scroll-smooth antialiased`,
+          `overflow-x-hidden scroll-smooth antialiased`,
           PoppinsFont.className,
           NotoSerifFont.variable
         )}
@@ -40,7 +41,7 @@ export default async function BaseLayout({ children, locale }: Props) {
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}
-          <footer className="container">footer</footer>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
