@@ -11,12 +11,13 @@ export default function AboutUs(): React.JSX.Element {
   const target = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target,
+    offset: ['start end', 'end start'],
   })
 
   const spring = useSpring(scrollYProgress, { stiffness: 100, damping: 12 })
 
-  const rotate = useTransform(spring, [0, 1], [360, 0])
-  const move = useTransform(spring, [0, 1], ['300%', '0%'])
+  const rotate = useTransform(spring, [0, 1], [0, 360])
+  const move = useTransform(spring, [0, 1], ['0%', '350%'])
 
   return (
     <div className="space-y-5">

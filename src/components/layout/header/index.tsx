@@ -61,7 +61,7 @@ export default function Header(): React.JSX.Element {
     <>
       <section
         className={cn(
-          'fixed inset-x-0 z-50 w-full border-b bg-white py-6 transition-all duration-500',
+          'fixed inset-x-0 z-50 h-[107px] w-full border-b bg-white py-6 transition-all duration-500',
           {
             'top-0': !hidden,
             '-top-[100%]': hidden,
@@ -71,7 +71,7 @@ export default function Header(): React.JSX.Element {
         <div className="container flex items-center justify-between">
           <Image
             alt="logo"
-            className="w-[140px]"
+            className="h-[52px] w-[140px] object-cover"
             height={500}
             src={'/images/logos/logo-orange.png'}
             width={500}
