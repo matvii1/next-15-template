@@ -11,7 +11,7 @@ export default function NewsTitle({ newsItem }: NewsTitleProps): React.JSX.Eleme
   const locale = useLocale() as Locale
 
   return (
-    <h1 className="mb-4 mt-5 text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
+    <h1 className="mb-4 mt-5 text-3xl font-bold tracking-tight md:text-4xl">
       {newsItem.translations[locale].title}
     </h1>
   )

@@ -14,7 +14,7 @@ export default function NewsPage(): React.JSX.Element {
     <div className="container mt-10">
       <BackButton />
 
-      <p className="mt-4 font-noto text-4xl font-bold">
+      <p className="mt-4 font-noto text-2xl font-bold md:text-4xl">
         {capitalizeFirstLetter(t('news'))}
       </p>
 

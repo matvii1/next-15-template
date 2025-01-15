@@ -14,7 +14,7 @@ export default function Reports(): React.JSX.Element {
     <div className="container relative flex min-h-[200px] flex-col gap-10 md:flex-row">
       <div className="basis-3/5">
         <p className="text-sm font-bold text-orange">{t('subtitle')}</p>
-        <p className="font-noto text-4xl font-bold">{t('title')}</p>
+        <p className="font-noto text-2xl font-bold md:text-4xl">{t('title')}</p>
       </div>
 
       <ul className="flex basis-2/5 flex-col gap-2 lg:gap-4">

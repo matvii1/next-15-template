@@ -14,7 +14,7 @@ export default function News(): React.JSX.Element {
     <div className="container space-y-10">
       <div>
         <p className="text-sm font-bold text-orange">{t('subtitle')}</p>
-        <p className="font-noto text-4xl font-bold">{t('title')}</p>
+        <p className="font-noto text-2xl font-bold md:text-4xl">{t('title')}</p>
       </div>
 
       <ul className="flex flex-col gap-4 md:flex-row">

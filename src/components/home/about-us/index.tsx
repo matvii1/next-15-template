@@ -21,14 +21,16 @@ export default function AboutUs(): React.JSX.Element {
 
   return (
     <div className="container space-y-5" id="about">
-      <h2 className="font-noto text-4xl font-bold">{t('homepage.about.title')}</h2>
+      <h2 className="font-noto text-2xl font-bold md:text-4xl">
+        {t('homepage.about.title')}
+      </h2>
 
       <div className="flex flex-col items-stretch gap-8 md:flex-row">
         <div className="min-h-[200px] w-full flex-1 rounded-2xl bg-light-orange md:min-h-[400px]"></div>
 
         <div className="flex min-h-full flex-1 flex-col justify-between">
           <div>
-            <p className="font-bold">
+            <p className="font-bold leading-[28px]">
               <span className="rounded-md bg-green p-1 px-1.5 font-bold uppercase text-white">
                 {t('shared.mamaPoruch')}
               </span>{' '}

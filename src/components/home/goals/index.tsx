@@ -29,7 +29,7 @@ export default function Goals(): React.JSX.Element {
   return (
     <div className="container relative flex gap-6" id="goals">
       <div className="flex-1 space-y-10">
-        <p className="font-noto text-4xl font-bold">{t('title')}</p>
+        <p className="font-noto text-2xl font-bold md:text-4xl">{t('title')}</p>
         <motion.ul
           className="flex flex-col gap-4"
           initial="hidden"
