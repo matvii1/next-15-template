@@ -15,7 +15,7 @@ export default function Hero(): React.JSX.Element {
     <div className="sm:container md:mt-20">
       <div className="relative mx-auto overflow-hidden bg-pink p-3">
         <div className="flex h-full min-h-[400px] flex-col items-center justify-between rounded-2xl bg-white px-3 py-4 lg:min-h-[500px] lg:p-10">
-          <h1 className="mx-auto mt-[50px] space-x-3 text-center font-noto text-2xl md:text-3xl lg:max-w-[60%] lg:text-5xl">
+          <h1 className="mx-auto mt-[50px] space-x-1 text-center font-noto text-2xl md:space-x-3 md:text-3xl lg:max-w-[60%] lg:text-5xl">
             {t('title')
               .split(' ')
               .map((word, index) => (
