@@ -62,7 +62,7 @@ export default function Header(): React.JSX.Element {
     <>
       <section
         className={cn(
-          'fixed inset-x-0 z-50 h-[107px] w-full border-b bg-white py-6 transition-all duration-500',
+          'fixed inset-x-0 z-50 flex h-[70px] w-full items-center border-b bg-white transition-all duration-500 md:h-[107px]',
           {
             'top-0': !hidden,
             '-top-[100%]': hidden,
@@ -72,7 +72,7 @@ export default function Header(): React.JSX.Element {
         <div className="container flex items-center justify-between">
           <Image
             alt="logo"
-            className="h-[52px] w-[140px] object-cover"
+            className="h-[32px] w-[80px] object-cover md:h-[52px] md:w-[140px]"
             height={500}
             src={'/images/logos/logo-orange.png'}
             width={500}
@@ -95,7 +95,7 @@ export default function Header(): React.JSX.Element {
           <MobileMenu />
         </div>
       </section>
-      <div className="h-[107px]"></div>
+      <div className="h-[70px] md:h-[107px]"></div>
     </>
   )
 }
