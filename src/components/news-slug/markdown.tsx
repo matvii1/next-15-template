@@ -12,7 +12,7 @@ export default function MarkdownContent({ newsItem }: MarkdownProps): React.JSX.
   const locale = useLocale() as Locale
 
   return (
-    <div className="prose mt-10 max-w-none">
+    <div className="prose mt-10 max-w-none xl:prose-lg">
       <Markdown>{newsItem.translations[locale].content}</Markdown>
     </div>
   )
