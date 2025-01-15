@@ -17,7 +17,7 @@ const links: {
 }[] = [
   {
     label: 'about',
-    href: '/about',
+    href: '/#about',
   },
   {
     label: 'news',
@@ -25,11 +25,11 @@ const links: {
   },
   {
     label: 'team',
-    href: '/team',
+    href: '/#team',
   },
   {
     label: 'goals',
-    href: '/goals',
+    href: '/#goals',
   },
 ]
 
@@ -76,7 +76,6 @@ export default function Header(): React.JSX.Element {
             src={'/images/logos/logo-orange.png'}
             width={500}
           />
-
           <nav>
             <ul className="flex items-center gap-4 rounded-full border border-grey-stroke p-4 px-8">
               {links.map((item) => {
@@ -88,11 +87,10 @@ export default function Header(): React.JSX.Element {
               })}
             </ul>
           </nav>
-
           <LocaleSwitcherSelect />
         </div>
       </section>
-      <div className="h-[85px]"></div>
+      <div className="h-[107px]"></div>
     </>
   )
 }

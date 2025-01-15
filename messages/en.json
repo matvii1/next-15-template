@@ -12,7 +12,7 @@
       }
     },
     "our-team": {
-      "subtitle": "team",
+      "subtitle": "Team",
       "title": "Our team",
       "description": "We are a team of professionals who believe in the power of every child and strive to create a favorable environment for their development.",
       "members": {
@@ -30,6 +30,28 @@
       "subtitle": "Collaboration that inspires",
       "title": "Our partners",
       "description": "Organizations with expertise in various fields and sharing values of support, development and scientific substantiation."
+    },
+    "goals": {
+      "title": "Our goals",
+      "goals": {
+        "goal1": "Promote women's development in the professional sphere for personal fulfillment of each individual",
+        "goal2": "Support women during pregnancy, childbirth, care, development and upbringing of children",
+        "goal3": "Provide psychological, psycho-emotional, inclusive, and academic support to Ukrainian families",
+        "goal4": "Involve parents in the educational process, form conscious parental attitudes towards children's upbringing and education",
+        "goal5": "Implement principles of partnership pedagogy",
+        "goal6": "Support educational reforms and transformations",
+        "goal7": "Promote expansion of childcare services (formal, non-formal, informal education)."
+      }
+    },
+    "news": {
+      "subtitle": "Latest information",
+      "title": "News",
+      "viewAll": "View all"
+    },
+    "reports": {
+      "subtitle": "Reports",
+      "title": "Read more about our work in the reports",
+      "buttonText": "Activity report for {year}"
     }
   },
   "shared": {
@@ -41,7 +63,9 @@
     "about": "About",
     "news": "News",
     "team": "Team",
-    "goals": "Goals"
+    "goals": "Goals",
+    "minutes": "min",
+    "back": "Back"
   },
   "inputs": {
     "locales": {

@@ -20,7 +20,7 @@ export default function AboutUs(): React.JSX.Element {
   const move = useTransform(spring, [0, 1], ['0%', '350%'])
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-5" id="about">
       <h2 className="font-noto text-4xl font-bold">{t('homepage.about.title')}</h2>
 
       <div className="flex items-stretch gap-8">

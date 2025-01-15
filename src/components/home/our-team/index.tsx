@@ -1,6 +1,8 @@
+import * as motion from 'motion/react-client'
 import { useTranslations } from 'next-intl'
 
 import BlockLayout from '@/components/shared/block-layout'
+import ShapeHalfCircle from '@/components/ui/shapes/shape-half-circle'
 
 import MemberCard from './member-card'
 
@@ -11,6 +13,7 @@ export default function OurTeam(): React.JSX.Element {
   return (
     <BlockLayout
       description={t('description')}
+      id="team"
       subtitle={t('subtitle')}
       title={t('title')}
     >
@@ -25,6 +28,23 @@ export default function OurTeam(): React.JSX.Element {
           )
         })}
       </div>
+
+      <motion.div
+        className="absolute bottom-0 left-4 size-[100px] cursor-pointer"
+        transition={{
+          type: 'spring',
+          damping: 8,
+        }}
+        viewport={{ once: true }}
+        whileInView={{
+          rotate: [-120, -45, 0],
+        }}
+        whileTap={{
+          rotate: [0, 360],
+        }}
+      >
+        <ShapeHalfCircle />
+      </motion.div>
     </BlockLayout>
   )
 }

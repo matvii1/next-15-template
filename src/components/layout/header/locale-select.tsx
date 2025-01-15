@@ -51,7 +51,7 @@ export default function LocaleSwitcherSelect() {
       </SelectTrigger>
       <SelectContent id="locale-switcher">
         {routing.locales.map((cur) => (
-          <SelectItem key={cur} value={cur}>
+          <SelectItem customItemIndicator={flagMap[cur as Locale]} key={cur} value={cur}>
             {t(`locales.${cur}`)}
           </SelectItem>
         ))}

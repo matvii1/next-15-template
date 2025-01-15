@@ -5,7 +5,8 @@ import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 
 import SocialLinks from '../shared/social-links'
-import { ShapeRound, ShapeTree } from '../ui/shapes'
+import ShapeRound from '../ui/shapes/shape-round'
+import ShapeTree from '../ui/shapes/shape-tree'
 
 export default function Hero(): React.JSX.Element {
   const t = useTranslations('homepage.hero')

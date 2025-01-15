@@ -30,18 +30,20 @@ export default async function BaseLayout({ children, locale }: Props) {
   const messages = await getMessages()
 
   return (
-    <html lang={locale}>
+    <html className="scroll-pt-[120px] scroll-smooth" lang={locale}>
       <body
         className={cn(
-          `overflow-x-hidden scroll-smooth antialiased`,
+          `overflow-x-hidden antialiased`,
           PoppinsFont.className,
           NotoSerifFont.variable
         )}
       >
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
-          <Footer />
+          <main className="flex min-h-screen flex-col">
+            <Header />
+            <div className="flex-1">{children}</div>
+            <Footer />
+          </main>
         </NextIntlClientProvider>
       </body>
     </html>

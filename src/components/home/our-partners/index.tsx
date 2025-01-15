@@ -1,8 +1,8 @@
-import { MoveUpRight } from 'lucide-react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
 import BlockLayout from '@/components/shared/block-layout'
+import Arrow from '@/components/ui/icons/arrow'
 
 const partners = [
   {
@@ -23,6 +23,7 @@ export default function OurPartners(): React.JSX.Element {
   return (
     <BlockLayout
       description={t('description')}
+      id="partners"
       subtitle={t('subtitle')}
       title={t('title')}
     >
@@ -45,7 +46,7 @@ export default function OurPartners(): React.JSX.Element {
               </div>
 
               <a className="absolute bottom-2 right-2 cursor-pointer p-1" href="#">
-                <MoveUpRight className="text-orange" />
+                <Arrow />
               </a>
             </div>
           )
