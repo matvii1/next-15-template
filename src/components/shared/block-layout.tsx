@@ -14,8 +14,8 @@ export default function BlockLayout({
   id,
 }: BlockLayoutProps) {
   return (
-    <div className="relative flex gap-10" id={id}>
-      <div className="max-w-[280px]">
+    <div className="container relative flex flex-col gap-10 md:flex-row" id={id}>
+      <div className="md:max-w-[280px]">
         <p className="mt-4 text-sm font-bold text-orange">{subtitle}</p>
         <p className="mt-2 font-noto text-4xl font-bold">{title}</p>
         <p className="mt-5 text-justify">{description}</p>

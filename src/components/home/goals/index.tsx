@@ -27,7 +27,7 @@ export default function Goals(): React.JSX.Element {
   ] as const
 
   return (
-    <div className="flex gap-6" id="goals">
+    <div className="container relative flex gap-6" id="goals">
       <div className="flex-1 space-y-10">
         <p className="font-noto text-4xl font-bold">{t('title')}</p>
         <motion.ul
@@ -55,22 +55,29 @@ export default function Goals(): React.JSX.Element {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <Arrow className="size-6" />
+              <Arrow className="size-6 shrink-0" />
               <p className="text-base lg:text-lg">{t(`goals.${goalKey}`)}</p>
             </motion.li>
           ))}
         </motion.ul>
       </div>
 
-      <div className="min-h-full w-max">
+      <div className="hidden min-h-full w-max md:block">
         <motion.div
-          className="sticky top-[200px]"
+          className="top-[200px]"
           ref={targetRef}
           style={{ rotate: cloudAnimationRotate }}
         >
           <ShapeCloud />
         </motion.div>
       </div>
+      <motion.div
+        className="absolute right-5 top-0"
+        ref={targetRef}
+        style={{ rotate: cloudAnimationRotate }}
+      >
+        <ShapeCloud className="size-[44px]" />
+      </motion.div>
     </div>
   )
 }

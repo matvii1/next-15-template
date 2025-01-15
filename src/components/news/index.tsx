@@ -11,13 +11,13 @@ export default function News(): React.JSX.Element {
   const t = useTranslations('homepage.news')
 
   return (
-    <div className="space-y-10">
+    <div className="container space-y-10">
       <div>
         <p className="text-sm font-bold text-orange">{t('subtitle')}</p>
         <p className="font-noto text-4xl font-bold">{t('title')}</p>
       </div>
 
-      <ul className="flex gap-4">
+      <ul className="flex flex-col gap-4 md:flex-row">
         {news.slice(0, 3).map((item) => {
           return <NewsCard item={item} key={item.id} />
         })}

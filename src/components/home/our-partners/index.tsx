@@ -27,17 +27,17 @@ export default function OurPartners(): React.JSX.Element {
       subtitle={t('subtitle')}
       title={t('title')}
     >
-      <div className="flex flex-1 items-center gap-6">
+      <div className="flex flex-1 flex-col items-center gap-6 md:flex-row">
         {partners.map((partner) => {
           return (
             <div
-              className="relative flex h-[300px] w-[280px] items-center justify-center rounded-3xl bg-[#F3EFF9] p-6"
+              className="relative flex h-[250px] w-full items-center justify-center rounded-3xl bg-[#F3EFF9] p-6 md:h-[300px] md:w-[280px]"
               key={partner.title}
             >
               <div className="flex flex-col items-center gap-2">
                 <Image
                   alt={partner.title}
-                  className="w-[170px]"
+                  className="w-[130px] md:w-[170px]"
                   height={200}
                   src={partner.image}
                   width={200}
@@ -46,7 +46,7 @@ export default function OurPartners(): React.JSX.Element {
               </div>
 
               <a className="absolute bottom-2 right-2 cursor-pointer p-1" href="#">
-                <Arrow />
+                <Arrow className="size-5" />
               </a>
             </div>
           )

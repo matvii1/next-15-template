@@ -11,30 +11,30 @@ export default function Reports(): React.JSX.Element {
   const t = useTranslations('homepage.reports')
 
   return (
-    <div className="relative flex min-h-[200px] gap-10">
+    <div className="container relative flex min-h-[200px] flex-col gap-10 md:flex-row">
       <div className="basis-3/5">
         <p className="text-sm font-bold text-orange">{t('subtitle')}</p>
         <p className="font-noto text-4xl font-bold">{t('title')}</p>
       </div>
 
-      <ul className="flex basis-2/5 flex-col gap-4">
+      <ul className="flex basis-2/5 flex-col gap-2 lg:gap-4">
         {new Array(2).fill(0).map((_, i) => (
           <li
             className={cn(
-              'flex max-w-[450px] items-center justify-between gap-2 rounded-2xl border border-grey-stroke bg-transparent px-6 py-4 text-2xl',
+              'flex max-w-[450px] items-center justify-between gap-2 rounded-2xl border border-grey-stroke bg-transparent px-3 py-2 lg:px-6 lg:py-4',
               {
                 'bg-[#F6BE59]': i === 1,
               }
             )}
             key={i}
           >
-            <p>{t('buttonText', { year: 2024 })}</p>
-            <Download />
+            <p className="text-lg lg:text-2xl">{t('buttonText', { year: 2024 })}</p>
+            <Download className="shrink-0" />
           </li>
         ))}
       </ul>
 
-      <div className="absolute bottom-0 left-0 flex items-center">
+      <div className="absolute bottom-0 left-0 hidden items-center md:flex">
         {[0, 1, 2, 3].map((index) => (
           <motion.div
             animate={{ x: 20, opacity: [1, 0] }}
@@ -49,6 +49,11 @@ export default function Reports(): React.JSX.Element {
           >
             <TreeArrowSingle />
           </motion.div>
+        ))}
+      </div>
+      <div className="flex items-center pl-5 md:hidden">
+        {[0, 1, 2, 3].map((index) => (
+          <TreeArrowSingle className="-ml-3 size-6 shrink-0" key={index} />
         ))}
       </div>
     </div>

@@ -10,8 +10,9 @@ import { Messages } from '@/i18n/types'
 import { cn } from '@/lib/utils'
 
 import LocaleSwitcherSelect from './locale-select'
+import MobileMenu from './mobile-menu'
 
-const links: {
+export const links: {
   label: keyof Messages['shared']
   href: string
 }[] = [
@@ -76,7 +77,7 @@ export default function Header(): React.JSX.Element {
             src={'/images/logos/logo-orange.png'}
             width={500}
           />
-          <nav>
+          <nav className="hidden md:block">
             <ul className="flex items-center gap-4 rounded-full border border-grey-stroke p-4 px-8">
               {links.map((item) => {
                 return (
@@ -87,7 +88,11 @@ export default function Header(): React.JSX.Element {
               })}
             </ul>
           </nav>
-          <LocaleSwitcherSelect />
+          <div className="hidden md:block">
+            <LocaleSwitcherSelect />
+          </div>
+
+          <MobileMenu />
         </div>
       </section>
       <div className="h-[107px]"></div>

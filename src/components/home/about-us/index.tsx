@@ -20,11 +20,11 @@ export default function AboutUs(): React.JSX.Element {
   const move = useTransform(spring, [0, 1], ['0%', '350%'])
 
   return (
-    <div className="space-y-5" id="about">
+    <div className="container space-y-5" id="about">
       <h2 className="font-noto text-4xl font-bold">{t('homepage.about.title')}</h2>
 
-      <div className="flex items-stretch gap-8">
-        <div className="h-[400px] flex-1 rounded-2xl bg-light-orange"></div>
+      <div className="flex flex-col items-stretch gap-8 md:flex-row">
+        <div className="min-h-[200px] w-full flex-1 rounded-2xl bg-light-orange md:min-h-[400px]"></div>
 
         <div className="flex min-h-full flex-1 flex-col justify-between">
           <div>
@@ -43,12 +43,14 @@ export default function AboutUs(): React.JSX.Element {
           </div>
 
           <motion.div
-            className="size-[100px]"
+            className="hidden size-[100px] md:block"
             ref={target}
             style={{ rotate: rotate, translateX: move }}
           >
             <ShapeWheel className="-bottom-5 left-10 w-[100px] text-pink" />
           </motion.div>
+
+          <ShapeWheel className="mt-5 w-[40px] text-pink md:hidden" />
         </div>
       </div>
     </div>

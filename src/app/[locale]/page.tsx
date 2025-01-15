@@ -8,7 +8,7 @@ import News from '@/components/news'
 
 export default function Page() {
   return (
-    <div className="container flex flex-col gap-20">
+    <div className="flex flex-col gap-10 md:gap-20">
       <Hero />
       <AboutUs />
       <OurTeam />
