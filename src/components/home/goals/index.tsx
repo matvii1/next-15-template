@@ -64,7 +64,7 @@ export default function Goals(): React.JSX.Element {
 
       <div className="hidden min-h-full w-max md:block">
         <motion.div
-          className="top-[200px]"
+          className="sticky top-[200px]"
           ref={targetRef}
           style={{ rotate: cloudAnimationRotate }}
         >
