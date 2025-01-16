@@ -71,8 +71,9 @@ export default function Goals(): React.JSX.Element {
           <ShapeCloud />
         </motion.div>
       </div>
+
       <motion.div
-        className="absolute right-5 top-0"
+        className="absolute right-5 top-0 md:hidden"
         ref={targetRef}
         style={{ rotate: cloudAnimationRotate }}
       >
