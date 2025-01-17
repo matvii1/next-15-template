@@ -19,7 +19,7 @@ export default function NewsCard({ item }: NewsCardProps): React.JSX.Element {
 
   return (
     <div
-      className="flex h-full min-h-[340px] flex-col justify-between rounded-3xl px-4 py-5 shadow-md"
+      className="flex h-full min-h-[340px] flex-col justify-between rounded-2xl border border-grey-stroke px-4 py-5"
       key={item.id}
     >
       <div>

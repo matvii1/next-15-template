@@ -11,7 +11,7 @@ export default function News(): React.JSX.Element {
   const t = useTranslations('homepage.news')
 
   return (
-    <div className="container space-y-10">
+    <div className="container space-y-5">
       <div>
         <p className="text-sm font-bold text-orange">{t('subtitle')}</p>
         <p className="font-noto text-2xl font-bold md:text-4xl">{t('title')}</p>

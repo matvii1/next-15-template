@@ -34,7 +34,7 @@ export default function Reports(): React.JSX.Element {
         ))}
       </ul>
 
-      <div className="absolute bottom-0 left-0 hidden items-center md:flex">
+      <div className="absolute bottom-0 left-10 hidden items-center md:flex">
         {[0, 1, 2, 3].map((index) => (
           <motion.div
             animate={{ x: 20, opacity: [1, 0] }}
