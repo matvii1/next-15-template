@@ -1,6 +1,7 @@
 'use client'
 
 import { useScroll, motion, useTransform, useSpring } from 'motion/react'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
@@ -26,7 +27,14 @@ export default function AboutUs(): React.JSX.Element {
       </h2>
 
       <div className="flex flex-col items-stretch gap-8 md:flex-row">
-        <div className="min-h-[200px] w-full flex-1 rounded-2xl bg-light-orange md:min-h-[400px]"></div>
+        {/* <div className="min-h-[200px] w-full flex-1 rounded-2xl bg-light-orange md:min-h-[400px]"></div> */}
+        <Image
+          alt="mama poruch"
+          className="aspect-square min-h-[200px] w-full shrink-0 basis-[30%] scale-110 object-cover"
+          height={400}
+          src="/images/logos/logo-boy.png"
+          width={400}
+        />
 
         <div className="flex min-h-full flex-1 flex-col justify-between">
           <div>
@@ -39,7 +47,7 @@ export default function AboutUs(): React.JSX.Element {
                 {t('homepage.about.description.subdescription')}
               </span>
             </p>
-            <span className="mt-2 inline-block text-justify">
+            <span className="mt-2 inline-block max-w-[500px] text-justify">
               {t('homepage.about.description.content')}
             </span>
           </div>

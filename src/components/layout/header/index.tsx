@@ -1,12 +1,12 @@
 'use client'
 
-import { ArrowRight } from 'lucide-react'
 import { motion, useMotionValueEvent, useScroll } from 'motion/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useRef, useState } from 'react'
 
+import SupportButton from '@/components/ui/support-button'
 import { Messages } from '@/i18n/types'
 import { cn } from '@/lib/utils'
 
@@ -60,11 +60,11 @@ export default function Header(): React.JSX.Element {
   const t = useTranslations('shared')
 
   return (
-    <motion.div>
+    <div>
       <motion.section
         animate="visible"
         className={cn(
-          'fixed inset-x-0 z-50 flex h-[70px] w-full items-center border-b bg-white transition-all duration-500 md:h-[107px]',
+          'fixed inset-x-0 z-50 flex h-[70px] w-full items-center border-b bg-white transition-all duration-500 md:h-[84px]',
           {
             'top-0': !hidden,
             '-top-[100%]': hidden,
@@ -83,8 +83,8 @@ export default function Header(): React.JSX.Element {
               width={500}
             />
           </Link>
-          <nav className="hidden lg:block">
-            <ul className="flex items-center gap-4 rounded-full border border-grey-stroke p-4 px-8">
+          <nav className="left-1/2 hidden lg:block xl:absolute xl:top-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2">
+            <ul className="flex items-center gap-4 rounded-full border border-grey-stroke p-3 px-8">
               {links.map((item) => {
                 return (
                   <li key={item.href}>
@@ -96,33 +96,20 @@ export default function Header(): React.JSX.Element {
               })}
             </ul>
           </nav>
-          <div className="hidden items-center gap-2 divide-x divide-gray-300 lg:flex">
-            <Link
-              className={cn(
-                'group/interactive relative block w-auto cursor-pointer overflow-hidden rounded-full border border-gray-200 bg-orange p-2 px-6 text-center text-base font-bold text-white'
-              )}
-              href={'/'}
-            >
-              <div className="flex items-center gap-2">
-                <div className="size-2 rounded-full bg-white transition-all duration-300 md:group-hover/interactive:scale-[100.8]"></div>
-                <span className="inline-block transition-all duration-300 md:group-hover/interactive:translate-x-12 md:group-hover/interactive:opacity-0">
-                  Підтримати
-                </span>
-              </div>
+          <div className="hidden items-center gap-2 divide-gray-300 lg:flex">
+            <SupportButton variant="small" />
 
-              <div className="absolute top-0 z-10 flex size-full translate-x-12 items-center justify-center gap-2 text-base font-bold text-orange opacity-0 transition-all duration-300 md:group-hover/interactive:-translate-x-5 md:group-hover/interactive:opacity-100">
-                <span>Підтримати</span>
-                <ArrowRight />
-              </div>
-            </Link>
+            <div className="h-[32px] w-px bg-gray-200"></div>
 
-            <LocaleSwitcherSelect />
+            <div className="shrink-0">
+              <LocaleSwitcherSelect />
+            </div>
           </div>
 
           <MobileMenu />
         </div>
       </motion.section>
       <div className="h-[70px] md:h-[107px]"></div>
-    </motion.div>
+    </div>
   )
 }

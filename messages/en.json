@@ -65,7 +65,9 @@
     "team": "Team",
     "goals": "Goals",
     "minutes": "min",
-    "back": "Back"
+    "back": "Back",
+    "support-long": "Support the project",
+    "support-short": "Support"
   },
   "inputs": {
     "locales": {

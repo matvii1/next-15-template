@@ -65,7 +65,9 @@
     "team": "Команда",
     "goals": "Напрямки",
     "minutes": "хв",
-    "back": "Назад"
+    "back": "Назад",
+    "support-long": "Підтримати проєкт",
+    "support-short": "Підтримати"
   },
   "inputs": {
     "locales": {

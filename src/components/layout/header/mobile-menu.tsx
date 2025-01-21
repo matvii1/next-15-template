@@ -1,11 +1,11 @@
 import * as Dialog from '@radix-ui/react-dialog'
-import { ArrowRight, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 
+import SupportButton from '@/components/ui/support-button'
 import { Link } from '@/i18n/routing'
-import { cn } from '@/lib/utils'
 
 import LocaleSwitcherSelect from './locale-select'
 
@@ -59,24 +59,7 @@ export default function MobileMenu(): React.JSX.Element {
               <LocaleSwitcherSelect />
             </div>
 
-            <Link
-              className={cn(
-                'group/interactive relative block w-auto cursor-pointer overflow-hidden rounded-full border border-gray-200 bg-orange p-2 px-6 text-center text-base font-bold text-white'
-              )}
-              href={'/'}
-            >
-              <div className="flex items-center gap-2">
-                <div className="size-2 rounded-full bg-white transition-all duration-300 md:group-hover/interactive:scale-[100.8]"></div>
-                <span className="inline-block transition-all duration-300 md:group-hover/interactive:translate-x-12 md:group-hover/interactive:opacity-0">
-                  Підтримати
-                </span>
-              </div>
-
-              <div className="absolute top-0 z-10 flex size-full translate-x-12 items-center justify-center gap-2 text-base font-bold text-orange opacity-0 transition-all duration-300 md:group-hover/interactive:-translate-x-5 md:group-hover/interactive:opacity-100">
-                <span>Підтримати</span>
-                <ArrowRight />
-              </div>
-            </Link>
+            <SupportButton />
           </div>
         </Dialog.Content>
       </Dialog.Portal>

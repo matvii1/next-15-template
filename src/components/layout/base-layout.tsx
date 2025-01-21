@@ -42,7 +42,6 @@ export default async function BaseLayout({ children, locale }: Props) {
         )}
       >
         <NextIntlClientProvider messages={messages}>
-
           <NextTopLoader color="#F6BE59" height={5} showSpinner={false} />
           <main className="flex min-h-screen flex-col">
             <Header />
