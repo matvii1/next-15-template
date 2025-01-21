@@ -8,12 +8,12 @@ const partners = [
   {
     title: 'International Inclusion Foundation',
     image: '/images/partners/iif.png',
-    href: '/',
+    href: 'https://iif-inclusion.org/',
   },
   {
     title: 'SEB',
     image: '/images/partners/seb.png',
-    href: '/',
+    href: '',
   },
 ]
 
@@ -30,9 +30,11 @@ export default function OurPartners(): React.JSX.Element {
       <div className="flex flex-1 flex-col items-center gap-6 lg:flex-row lg:items-stretch">
         {partners.map((partner) => {
           return (
-            <div
+            <a
               className="relative flex h-[250px] w-full items-center justify-center rounded-3xl bg-[#F3EFF9] p-6 md:h-[300px] md:w-[280px]"
+              href={partner.href}
               key={partner.title}
+              target="_blank"
             >
               <div className="flex flex-col items-center gap-2">
                 <Image
@@ -45,10 +47,8 @@ export default function OurPartners(): React.JSX.Element {
                 <p className="text-center text-xl font-bold">{partner.title}</p>
               </div>
 
-              <a className="absolute bottom-2 right-2 cursor-pointer p-1" href="#">
-                <Arrow className="size-5" />
-              </a>
-            </div>
+              <Arrow className="size-5" />
+            </a>
           )
         })}
       </div>
