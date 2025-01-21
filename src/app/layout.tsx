@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       {
         url: '/images/logos/logo-orange.png',
         width: 500,
-        height: 500,
+        height: 300,
         alt: 'Mama Poruch',
       },
     ],
