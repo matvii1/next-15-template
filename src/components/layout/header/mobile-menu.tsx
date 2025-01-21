@@ -32,9 +32,9 @@ export default function MobileMenu(): React.JSX.Element {
             <Image
               alt="logo"
               className="h-[52px] w-[140px] object-cover"
-              height={500}
+              height={200}
               src={'/images/logos/logo-orange.png'}
-              width={500}
+              width={534}
             />
             <Dialog.Close>
               <X className="size-7" />

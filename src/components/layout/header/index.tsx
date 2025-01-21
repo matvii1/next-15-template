@@ -78,9 +78,9 @@ export default function Header(): React.JSX.Element {
             <Image
               alt="logo"
               className="h-[32px] w-[80px] object-cover md:h-[52px] md:w-[140px]"
-              height={500}
+              height={200}
               src={'/images/logos/logo-orange.png'}
-              width={500}
+              width={534}
             />
           </Link>
           <nav className="left-1/2 hidden lg:block xl:absolute xl:top-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2">
