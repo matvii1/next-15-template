@@ -43,7 +43,7 @@ export default function LocaleSwitcherSelect() {
 
   return (
     <Select defaultValue={locale} disabled={isPending} onValueChange={onSelectChange}>
-      <SelectTrigger className="w]">
+      <SelectTrigger className="w-[160px]">
         <div className="flex items-center gap-2">
           {flagMap[locale as Locale]}
           <SelectValue />
