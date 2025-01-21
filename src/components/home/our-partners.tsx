@@ -27,7 +27,7 @@ export default function OurPartners(): React.JSX.Element {
       subtitle={t('subtitle')}
       title={t('title')}
     >
-      <div className="flex flex-1 flex-col items-center gap-6 md:flex-row">
+      <div className="flex flex-1 flex-col items-center gap-6 lg:flex-row lg:items-stretch">
         {partners.map((partner) => {
           return (
             <div

@@ -21,6 +21,7 @@
     "motion": "^11.16.2",
     "next": "15.1.4",
     "next-intl": "^3.26.3",
+    "nextjs-toploader": "^3.7.15",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^2.6.0",

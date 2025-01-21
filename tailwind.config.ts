@@ -17,8 +17,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-        noto: ['Noto Serif', 'serif'],
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+        noto: ['var(--font-noto-serif)', 'serif'],
       },
       colors: {
         primary: '#191E20',

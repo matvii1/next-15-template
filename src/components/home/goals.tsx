@@ -30,36 +30,36 @@ export default function Goals(): React.JSX.Element {
     <div className="container relative flex gap-6" id="goals">
       <div className="flex-1 space-y-5">
         <p className="font-noto text-2xl font-bold md:text-4xl">{t('title')}</p>
-        <motion.ul
-          className="flex flex-col gap-4"
-          initial="hidden"
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                type: 'spring',
-                stiffness: 100,
-                staggerChildren: 0.2,
-              },
-            },
-          }}
-          viewport={{ once: true }}
-          whileInView="visible"
-        >
-          {goalKeys.map((goalKey) => (
+        <ul className="flex flex-col gap-4">
+          {goalKeys.map((goalKey, i) => (
             <motion.li
               className="flex items-center gap-3"
+              initial="hidden"
               key={goalKey}
               variants={{
-                hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0 },
+                hidden: {
+                  opacity: 0,
+                  y: 10,
+                },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    type: 'spring',
+                    stiffness: 100,
+                    delay: i * 0.1,
+                    duration: 0.1,
+                  },
+                },
               }}
+              viewport={{ once: true }}
+              whileInView="visible"
             >
               <Arrow className="size-6 shrink-0" />
               <p className="text-base lg:text-lg">{t(`goals.${goalKey}`)}</p>
             </motion.li>
           ))}
-        </motion.ul>
+        </ul>
       </div>
 
       <div className="hidden min-h-full w-max md:block">

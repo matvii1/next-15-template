@@ -12,7 +12,7 @@ export default function BackButton(): React.JSX.Element {
   return (
     <Link
       className={cn(
-        'flex w-max items-center gap-[2px] rounded-full border border-orange px-2 py-1 text-sm font-medium text-orange'
+        'flex w-max items-center gap-[2px] rounded-full border border-orange px-3 py-1 text-sm font-medium text-orange'
       )}
       href={'..'}
     >

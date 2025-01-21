@@ -17,7 +17,7 @@ export default function OurTeam(): React.JSX.Element {
       subtitle={t('subtitle')}
       title={t('title')}
     >
-      <div className="flex flex-1 flex-col items-center gap-6 md:flex-row">
+      <div className="flex flex-1 flex-col items-center gap-6 lg:flex-row lg:items-stretch">
         {membersArray.map((memberKey) => {
           return (
             <MemberCard
@@ -30,7 +30,7 @@ export default function OurTeam(): React.JSX.Element {
       </div>
 
       <motion.div
-        className="absolute bottom-0 left-4 hidden size-[100px] cursor-pointer md:block"
+        className="absolute bottom-0 left-14 hidden size-[100px] cursor-pointer lg:block"
         transition={{
           type: 'spring',
           damping: 8,
@@ -45,7 +45,7 @@ export default function OurTeam(): React.JSX.Element {
       >
         <ShapeHalfCircle />
       </motion.div>
-      <ShapeHalfCircle className="absolute right-6 top-8 size-[40px] -scale-x-100 md:hidden" />
+      <ShapeHalfCircle className="absolute right-6 top-8 size-[40px] -scale-x-100 lg:hidden" />
     </BlockLayout>
   )
 }

@@ -16,8 +16,8 @@ export default function BlockLayout({
   id,
 }: BlockLayoutProps) {
   return (
-    <div className="container relative flex flex-col gap-10 md:flex-row" id={id}>
-      <div className="md:max-w-[280px]">
+    <div className="container relative flex flex-col gap-10 lg:flex-row" id={id}>
+      <div className="lg:max-w-[280px]">
         <p className="mt-4 text-sm font-bold text-orange">
           {capitalizeFirstLetter(subtitle)}
         </p>

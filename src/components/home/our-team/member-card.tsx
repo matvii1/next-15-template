@@ -8,7 +8,7 @@ export default function MemberCard({
   description,
 }: MemberCardProps): React.JSX.Element {
   return (
-    <div className="flex flex-col md:max-w-[350px]">
+    <div className="flex w-full flex-col md:max-w-[350px]">
       <div className="h-[260px] rounded-2xl bg-slate-200 md:h-[350px]"></div>
       <div className="p-2">
         <p className="mt-2 font-bold">{name}</p>
