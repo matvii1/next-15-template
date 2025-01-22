@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useMotionValueEvent, useScroll } from 'motion/react'
+import { useMotionValueEvent, useScroll } from 'motion/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
@@ -60,9 +60,8 @@ export default function Header(): React.JSX.Element {
   const t = useTranslations('shared')
 
   return (
-    <div>
-      <motion.section
-        animate="visible"
+    <header>
+      <section
         className={cn(
           'fixed inset-x-0 z-50 flex h-[70px] w-full items-center border-b bg-white transition-all duration-500 md:h-[84px]',
           {
@@ -70,8 +69,6 @@ export default function Header(): React.JSX.Element {
             '-top-[100%]': hidden,
           }
         )}
-        initial="hidden"
-        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
       >
         <div className="container flex items-center justify-between">
           <Link href="/">
@@ -108,8 +105,8 @@ export default function Header(): React.JSX.Element {
 
           <MobileMenu />
         </div>
-      </motion.section>
+      </section>
       <div className="h-[70px] md:h-[107px]"></div>
-    </div>
+    </header>
   )
 }

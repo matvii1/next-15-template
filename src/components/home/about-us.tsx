@@ -26,8 +26,7 @@ export default function AboutUs(): React.JSX.Element {
         {t('homepage.about.title')}
       </h2>
 
-      <div className="flex flex-col items-stretch gap-8 md:flex-row">
-        {/* <div className="min-h-[200px] w-full flex-1 rounded-2xl bg-light-orange md:min-h-[400px]"></div> */}
+      <div className="flex flex-col-reverse items-stretch gap-8 md:flex-row">
         <Image
           alt="mama poruch"
           className="aspect-square min-h-[200px] w-full shrink-0 basis-[30%] scale-110 object-cover"

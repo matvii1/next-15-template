@@ -47,7 +47,7 @@ export default function OurPartners(): React.JSX.Element {
                 <p className="text-center text-xl font-bold">{partner.title}</p>
               </div>
 
-              <Arrow className="size-5" />
+              <Arrow className="absolute bottom-6 right-6 size-5 md:bottom-4 md:right-4" />
             </a>
           )
         })}

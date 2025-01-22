@@ -21,7 +21,7 @@ export default function Hero(): React.JSX.Element {
       variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
     >
       <div className="relative mx-auto overflow-hidden bg-pink p-3">
-        <div className="flex h-full min-h-[400px] flex-col items-center justify-between rounded-2xl bg-white px-3 py-4 lg:min-h-[500px] lg:p-10">
+        <div className="flex h-full min-h-[360px] flex-col items-center justify-between rounded-2xl bg-white px-3 py-4 lg:min-h-[500px] lg:p-10">
           <h1 className="mx-auto mt-[50px] space-x-1 text-center font-noto text-2xl md:space-x-3 md:text-3xl lg:max-w-[60%] lg:text-5xl">
             {t('title')
               .split(' ')
