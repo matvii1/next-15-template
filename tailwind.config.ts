@@ -19,18 +19,6 @@ const config: Config = {
         poppins: ['var(--font-poppins)', 'sans-serif'],
         noto: ['var(--font-noto-serif)', 'serif'],
       },
-      colors: {
-        primary: '#191E20',
-        orange: '#EB6225',
-        blue: '#3862AA',
-        green: '#3E9676',
-        'green-light': '#9C9',
-        'light-orange': '#FCF5EA',
-        yellow: '#F6BE59',
-        pink: '#F0C3D2',
-        brown: '#603E00',
-        'grey-stroke': 'rgba(0, 0, 0, 0.2)',
-      },
     },
     container: {
       center: true,
