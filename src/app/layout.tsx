@@ -1,13 +1,14 @@
 import { Poppins, Ubuntu } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 
+import './globals.css'
 import { cn } from '@/lib/utils'
 
 import type { ReactNode } from 'react'
 
-const NotoSerifFont = Ubuntu({
+const UbuntuFont = Ubuntu({
   subsets: ['latin', 'cyrillic'],
-  variable: '--font-noto-serif',
+  variable: '--font-ubuntu',
   weight: ['400', '500', '700'],
 })
 
@@ -29,7 +30,7 @@ export default async function RootLayout({ children }: Props) {
         className={cn(
           `overflow-x-hidden antialiased`,
           PoppinsFont.className,
-          NotoSerifFont.variable
+          UbuntuFont.variable
         )}
       >
         <NextTopLoader height={5} showSpinner={false} />

@@ -1,7 +1,6 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  darkMode: ['class'],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -17,7 +16,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         poppins: ['var(--font-poppins)', 'sans-serif'],
-        noto: ['var(--font-noto-serif)', 'serif'],
+        ubuntu: ['var(--font-ubuntu)', 'sans-serif'],
       },
     },
     container: {
