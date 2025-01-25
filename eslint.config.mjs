@@ -12,13 +12,8 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.config({
-    extends: [
-      'next/core-web-vitals',
-      'next/typescript',
-      'prettier',
-      'plugin:tailwindcss/recommended',
-    ],
-    plugins: ['prettier', 'tailwindcss', 'unused-imports'],
+    extends: ['next/core-web-vitals', 'next/typescript', 'prettier'],
+    plugins: ['prettier', 'unused-imports'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
       project: './tsconfig.json',
@@ -46,7 +41,6 @@ const eslintConfig = [
       'prefer-arrow-callback': ['error'],
       'prefer-template': ['error'],
       'prettier/prettier': ['warn'],
-      'tailwindcss/classnames-order': 'warn',
       'import/no-default-export': 'off',
       'import/named': 'off',
       'import/no-cycle': 'off',
